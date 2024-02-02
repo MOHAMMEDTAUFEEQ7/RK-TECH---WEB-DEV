@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111 !important;
+}
+
+.row__poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 250px;
+  max-width: 300px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.row {
+  color: white;
+  margin-left: 20px;
+}
+
+/* banner */
+.banner {
+  background-image: url('images/banner.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  object-fit: contain;
+  height: 448px;
+}
+
+.banner__contents {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 190px;
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.banner__description {
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 360px;
+  height: 180px;
+}
+
+.banner__button {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.banner__button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+
+.banner--fadeBottom {
+  margin-top: 145px;
+  height: 7.4rem;
+  background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+/* nav */
+
+.custom-navbar {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.navbar-links a:hover {
+  color: #a0a0a0;
+}
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+  display: block;
+}
+
+.navbar-dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-dropdown-content a:hover {
+  background-color: #a0a0a0;
+  color: black;
+}
+
+.navbar-img {
+  max-height: 40px;
+}
+
+footer {
+  border-top: 8px solid #333;
+  padding: 2rem 8rem;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  line-height: 1.6;
+}
+
+.footer__row__2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.footer__row__1 > h4 {
+  font-size: 15px;
+  font-weight: 5000;
+}
+
+.footer__row__3 > .dropdown__container {
+  width: fit-content;
+  border: 1px solid #757575;
+  color: #757575;
+}
+
+.footer__row__3 > .dropdown__container > .language__drop__down {
+  color: #757575;
+}
+
+
+
+footer {
+  padding: 2rem 20rem;
+  justify-content: flex-start;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.footer__row__2 {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.footer__row__1,
+.footer__row__3,
+.footer__row__4 {
+  align-self: flex-start;
+}
+
+/*Pricing page*/
+main {
+  padding: 2rem;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.pricing-column {
+  flex: 1;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #333;
+  margin: 0 10px;
+  transition: background-color 0.3s ease; /* Add transition for smoother hover effect */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pricing-price {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-features li {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-features li:nth-child(3):after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  margin: 0.5rem 0;
+}
+
+/* Button styles */
+.pricing-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Hover effect */
+.pricing-button:hover {
+  background-color: #8b8a8a; /* Change the background color on hover */
+}
+
+/*Live page*/
+
+.column {
+  flex: 0 0 30%; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.container {
+  border: 2px solid #666; /* Set the border color to grey */
+  border-radius: 5px;
+  padding: 10px; /* Adjust padding for spacing within the container */
+}
+
+.image-container {
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-container {
+  text-align: center;
+}
